@@ -28,19 +28,18 @@ const App = () => {
     setSearchTerm(event.target.value);
   };
 
-  const searchedStories = stories.filter((story) =>
-    story.title.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+ 
 
   return (
     <div>
       <h1>My Hacker Stories</h1>
 
       <Search onSearch={handleSearch} />
+      <div>{searchTerm}</div>
 
       <hr />
 
-      <List list={searchedStories} />
+      <List list={stories} />
     </div>
   );
 };
