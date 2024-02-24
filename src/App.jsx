@@ -1,8 +1,8 @@
 import * as React from 'react';
-import {Search} from './Search'
-import {List} from './List'
+import { Search } from './Search'
+import { List } from './List'
 
-const App = () => {
+export const App = () => {
   const stories = [
     {
       title: 'React',
@@ -22,29 +22,20 @@ const App = () => {
     },
   ];
 
-  const [searchTerm, setSearchTerm] = React.useState('');
 
-  const handleSearch = (event) => {
-    setSearchTerm(event.target.value);
-  };
 
- 
+
 
   return (
-    <div>
-      <h1>My Hacker Stories</h1>
 
-      <Search onSearch={handleSearch} />
-      <div>{searchTerm}</div>
+    <>
+      <h1>jkdfjdk</h1>
+    </>
 
-      <hr />
-
-      <List list={stories} />
-    </div>
   );
 };
 
 
 
 
-export default App;
+
