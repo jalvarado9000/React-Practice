@@ -2,7 +2,9 @@ import * as React from 'react';
 import { Search } from './Search'
 import { List } from './List'
 
+
 export const App = () => {
+
   const stories = [
     {
       title: 'React',
@@ -22,20 +24,10 @@ export const App = () => {
     },
   ];
 
-
-
-
-
   return (
-
-    <>
-      <h1>jkdfjdk</h1>
-    </>
-
-  );
-};
-
-
+    <div>App</div>
+  )
+}
 
 
 
