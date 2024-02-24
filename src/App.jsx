@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { Search } from './Search'
-import { List } from './List'
+
 
 
 export const App = () => {
@@ -9,7 +8,7 @@ export const App = () => {
     {
       title: 'React',
       url: 'https://reactjs.org/',
-      author: 'Jordan Walke',
+      author: 'Jordan Walk',
       num_comments: 3,
       points: 4,
       objectID: 0,
@@ -17,7 +16,7 @@ export const App = () => {
     {
       title: 'Redux',
       url: 'https://redux.js.org/',
-      author: 'Dan Abramov, Andrew Clark',
+      author: 'Dan Abram, Andrew Clark',
       num_comments: 2,
       points: 5,
       objectID: 1,
@@ -25,9 +24,13 @@ export const App = () => {
   ];
 
   return (
-    <div>App</div>
+    <div><h1>App</h1></div>
   )
 }
 
 
 
+
+
+
+export default App;
