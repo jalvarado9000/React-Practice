@@ -2,7 +2,7 @@ import React from 'react'
 
 import Listbullet from './Listbullet'
 
-export const List = (props) => {
+export const List = ({item, handle}) => {
 
   const stories = [
     {
@@ -23,10 +23,24 @@ export const List = (props) => {
     },
   ];
 
+  const user = {
+    firstName: 'Robin',
+    pet: {
+      name: 'Trixi',
+    },
+  };
+
+  const {firstName,pet:name} = user;
+
+
+
+
 
   let list = stories.map((item) => {
     return (
       <ul>
+      
+       
         <Listbullet key={item.objectID} onList={item} />
       </ul>
     )
@@ -37,12 +51,14 @@ export const List = (props) => {
   const [text, setText] = React.useState('');
 
 
+
+
   const handleTxt = (event) => {
 
 
     setText(event.target.value);
     console.log(event.target.value);
-    props.handle(text);
+    handle(text);
 
 
 
@@ -53,6 +69,8 @@ export const List = (props) => {
   return (
     <div>
       {list}
+      {firstName}
+     
       <form>
         <label htmlFor="info">This is a form</label>
         <input name="title" type="text" id="info" onChange={handleTxt} />
